@@ -177,7 +177,7 @@ void positionControllerINDI(const sensorData_t *sensors,
 	};
 
 	// Compute transformation matrix from body frame (index B) into NED frame (index O)
-	float M_OB[3][3] = {0};
+	float M_OB[3][3] = {{0}};
 	m_ob(att, M_OB);
 
 	// Transform lin. acceleration in NED (add gravity to the z-component)
